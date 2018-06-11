@@ -1,15 +1,8 @@
 # Site settings
-baseURL = "http://example.org/"
+baseURL = "https://anypaste.xyz/"
 languageCode = "en-us"
-title = "hugo-simpledoc-theme"
+title = "Anypaste - Smart command-line file sharing tool for Linux and Mac"
 theme = "simpledoc"
-
-[blackfriday]
-  angledQuotes = true
-  fractions = false
-  plainIDAnchors = true
-  smartlists = true
-  extensions = ["hardLineBreak"]
 
 # Top menu
 [[menu.top]]
@@ -27,17 +20,22 @@ theme = "simpledoc"
 
 # Site parameters
 [params]
+    landingTitle = "Anypaste"
 
     # Meta
-    description = "hugo-simpledoc-theme - clean and convenient documentation theme for Hugo website generator"
-    author = "Pavel Kanyshev"
-    keywords = "hugo, documentation, hugo theme, hugo simple documentation theme"
+    description = "Anypaste automatically determines the best host for your files and uploads them in a single command. File path in, URL out."
+    author = "Mark Polyakov"
+    keywords = "imgur, gfycat, command line, cli, file sharing, pastebin, linux, mac, automatic"
     
     # Header
     # If not set, site title and meta description will be shown.
     # You may use markdown here
-    headerTitle = "hugo-simpledoc-theme demo"
-    headerDescription = "Set-up & general guide to make a clean documentation page with **Hugo** and **hugo-simpledoc-theme**"
+    headerTitle = "Documentation"
+    headerDescription = "How to use and make plugins for Anypaste."
     
     # Back-to-top button name
     bttButton = ""
+
+[params.asciinema]
+    id = "RceX2cd4ELhocM36I5mSHJycv"
+    rows = 25

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="html" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width"/>
@@ -11,34 +11,47 @@
 </head>
 
 <body>
-    <section id="Menu">
-        <header>
-            <h1>{{ with .Site.Params.headerTitle }}{{ . | markdownify }}{{ else }}{{ .Site.Title }}{{ end }}</h1>
-            <p>{{ with .Site.Params.headerDescription }}{{ . | markdownify }}{{ else }}{{ .Site.Params.description }}{{ end }}</p>
-        </header>
-        <nav>
-        {{ range .Site.Menus.top }}
-            <a href="{{.URL}}" target="blank">{{ .Name }}</a>
+    <div id="landing">
+        <div class="float-left">
+            <h1>{{ .Site.Params.landingTitle | markdownify }}</h1>
+        </div>
+        {{ with .Site.Params.asciinema }}
+            <div id="asciinema" class="float-right">
+                <script type="text/javascript" src="https://asciinema.org/a/{{ .id }}.js" id="asciicast-{{ .id }}" async data-rows='{{ .rows }}' data-preload='true'></script>
+            </div>
         {{ end }}
-        </nav>
-        <nav>
+    </div>
+
+    <div id="docs">
+        <section id="toc">
+            <header>
+                <h1>{{ with .Site.Params.headerTitle }}{{ . | markdownify }}{{ else }}{{ .Site.Title }}{{ end }}</h1>
+                <p>{{ with .Site.Params.headerDescription }}{{ . | markdownify }}{{ else }}{{ .Site.Params.description }}{{ end }}</p>
+            </header>
+            <nav>
+            {{ range .Site.Menus.top }}
+                <a href="{{.URL}}" target="blank">{{ .Name }}</a>
+            {{ end }}
+            </nav>
+            <nav>
+            {{ range .Data.Pages.ByWeight }}
+                <a href="#{{ .Params.anchor }}">{{ .Title }}</a>
+            {{ end }}
+            </nav>
+        </section>
+
         {{ range .Data.Pages.ByWeight }}
-            <a href="#{{ .Params.anchor }}">{{ .Title }}</a>
+
+        <section id="{{ .Params.anchor }}">
+
+            <h1><a href="#{{ .Params.anchor }}">{{ .Title }}</a><small><a href="#docs">{{ with .Site.Params.bttButton }}{{ . | markdownify }}{{ else }}Back to Top{{ end }}</a></small></h1>
+
+            {{ .Content | markdownify }}
+
+        </section>
+
         {{ end }}
-        </nav>
-    </section>
-
-    {{ range .Data.Pages.ByWeight }}
-
-    <section id="{{ .Params.anchor }}">
-
-        <h1><a href="#{{ .Params.anchor }}">{{ .Title }}</a><small><a href="#html">{{ with .Site.Params.bttButton }}{{ . | markdownify }}{{ else }}Back to Top{{ end }}</a></small></h1>
-
-        {{ .Content | markdownify }}
-
-    </section>
-
-    {{ end }}
+    </div>
 
 </body>
 </html>

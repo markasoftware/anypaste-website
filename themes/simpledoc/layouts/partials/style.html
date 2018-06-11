@@ -10,18 +10,33 @@
     img { margin: 1.25% 0; -ms-interpolation-mode: bicubic; }
     html {
         background-color: #F0F1F3;
-        padding: 2%;
+        height: 100%;
     }
     body {
+        height: 100%;
+    }
+    #landing {
+        height: 100%;
+        box-shadow: #777 0 0 8px -4px;
+        padding: 10vh;
+    }
+    .float-left {
+        float: left;
+    }
+    .float-right {
+        float: right;
+    }
+    #docs {
         font-size: 16px;
         line-height: 1.6;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         color: #242424;
         max-width: 800px;
         margin: 5% auto;
-       
+        position: relative;
+        top: -35%;
     }
-    body::after {
+    #docs::after {
         clear: both;
         content: "";
         display: table;
@@ -37,7 +52,7 @@
         font-weight: 500;
         text-decoration: none;
     }
-    h1, h2 {
+    #docs h1, h2 {
         font-size: 36px;
         padding-bottom: 0.3em;
         margin-bottom: 0.4em;
@@ -67,6 +82,7 @@
         margin-bottom: 1%;
         position: relative;
         padding: 6% 8%;
+        box-shadow: #777 0 0 8px -4px;
     }
     blockquote {
         border-left: 3px solid #d54e21;
@@ -81,12 +97,18 @@
     blockquote code {
         color: #d54e21;
     }
-    code, cite {
+    :not(pre) > code, cite {
         background-color: #F0F2F4;
         border-radius: 3px;
         color: #000;
         font: monospace;
         padding: 2px 7px;
+    }
+    pre {
+        overflow: auto;
+        background: #F0F2F4;
+        font: monospace;
+        padding: 2px 6px;
     }
     a {
         color: #1e8cbe;
@@ -94,9 +116,6 @@
     }
     a:hover {
         color: #d54e21;
-    }
-    ul {
-        list-style: none;
     }
     ol {
         list-style: number;
@@ -108,7 +127,7 @@
     ol li:last-child {
         margin-bottom: 0;
     }
-    p, ul, ol, blockquote  {
+    p, ul, ol, blockquote, pre  {
         margin-bottom: 4%;
     }
     ul ul {
@@ -224,5 +243,13 @@
         p, ul, ol, blockquote  {
             margin-bottom: 8%;
         }
+    }
+    
+    /* Anypaste Specific styles (colors, etc) */
+    #landing {
+        background: radial-gradient(circle at top left, aquamarine, lightgreen);
+    }
+    #landing h1 {
+        color: hsl(300, 40%, 50%);
     }
 </style>
