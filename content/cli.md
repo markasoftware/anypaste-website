@@ -8,13 +8,14 @@ weight: 200
 All command-line options are documented in `anypaste -h` as well as here.
 
 * `-p`: Specify part of a plugin name to use.
+* `-t`: Comma-separated list of required tags. For example, `-t private,permanent` will only match plugins that keep your file indefinitely and don't publicly list links.
 * `-f`: Skip compatibility checks (force).
 * `-i`: Interactive mode. Check it out, super cool!
 * `-n`: Specify a custom name for the file (displayed only on certain sites).
 * `-c`: Specify a path to a custom configuration file.
 * `-C`: Create a default configuration file. Everything will be commented out by default. See [Configuration](#configuration) for more info.
 * `-l`, `--list`: List all currently installed plugins in human-readable form. Can be combined with other options, if so it will list the plugins that would otherwise be attempted for upload.
-* `--list-machine`: Same as `-l`, but for use inside of other scripts. It prints the raw `get_static_info` output from each plugin, with a blank line between plugins and trailing.
+* `--list-machine`: Same as `-l`, but for use inside of other scripts. It prints the raw `get_info` output from each plugin, with a blank line between plugins and at the end.
 * `-x`, `--copy`, `--notify`: See [Post-Upload Hooks](#hooks).
 * `-v`, `--version`: Print version.
 * `-h`, `--help`: Print help text.

@@ -2,7 +2,7 @@
 title: "Environment Variables"
 date: 2018-06-10T13:43:21-07:00
 anchor: "env"
-weight: 1000
+weight: 2000
 ---
 
 [Plugins](#making-plugins) and [hooks](#hooks) have access to a number of environment variables. This is the primary way to get information about the currently uploading file.

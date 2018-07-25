@@ -3,20 +3,17 @@ baseURL = "https://anypaste.xyz/"
 languageCode = "en-us"
 title = "Anypaste - Smart command-line file sharing tool for Linux and Mac"
 theme = "simpledoc"
+ignoreFiles = ["\\.kate-swp"]
 
 # Top menu
 [[menu.top]]
-    name = "hugo-simpledoc-theme GitHub Repository"
+    name = "Releases on GitHub"
     weight = 20
-    url = "https://github.com/aerohub/hugo-simpledoc-theme"
+    url = "https://github.com/markasoftware/anypaste/releases"
 [[menu.top]]
-    name = "Hugo - A Fast and Flexible Website Generator"
-    weight = 10
-    url = "http://gohugo.io/"
-[[menu.top]]
-    name = "Original WPThemeDoc by Rich Tabor"
+    name = "Chat on IRC"
     weight = 30
-    url = "https://github.com/richtabor/WPThemeDoc"
+    url = "https://kiwiirc.com/client/irc.freenode.net/#anypaste"
 
 # Site parameters
 [params]
@@ -31,7 +28,7 @@ theme = "simpledoc"
     # If not set, site title and meta description will be shown.
     # You may use markdown here
     headerTitle = "Documentation"
-    headerDescription = "How to use and make plugins for Anypaste."
+    headerDescription = "The complete guide to installing, using, and making plugins for Anypaste."
     
     # Back-to-top button name
     bttButton = ""

@@ -12,7 +12,7 @@ Hooks run after Anypaste finishes uploading a file. Anypaste has two built-in ho
 
 You can change how hooks work when multiple files are uploaded using `ap_hook_policy`. If it is set to `lazy` (the default), hooks will only run after the last file in a batch. If set to `greedy`, they will be run after every file.
 
-Custom hooks can be added to the `ap_hooks` array in the config file. They have access to the same [environment variables](#env) as plugins, but additionally can see the output of the last plugin in `ap_last_stdout`. Custom hooks are able to work in combination with built-in plugins; both will run. This example will fun the first link outputted during each upload to 
+Custom hooks can be added to the `ap_hooks` array in the config file. They have access to the same [environment variables](#env) as plugins, but additionally can see the output of the last plugin in `ap_last_stdout`. Custom hooks are able to work in combination with built-in plugins; both will run. Example: Adding the following to your config file will save every link uploaded with Anypaste to `~/Other/anypaste-links.txt`:
 
 ```
 ap_hook_policy=greedy
