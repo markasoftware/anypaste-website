@@ -1,0 +1,6 @@
+[build]
+  publish = "public/"
+  command = "hugo"
+[[redirects]]
+  from = "/sh"
+  to = "https://raw.githubusercontent.com/markasoftware/anypaste/master/anypaste"
