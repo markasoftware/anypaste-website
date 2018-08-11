@@ -8,16 +8,22 @@ ignoreFiles = ["\\.kate-swp"]
 # Top menu
 [[menu.top]]
     name = "Releases on GitHub"
-    weight = 20
+    weight = 100
     url = "https://github.com/markasoftware/anypaste/releases"
 [[menu.top]]
+    name = "Download latest stable version"
+    weight = 200
+    url = "https://anypaste.xyz/sh"
+[[menu.top]]
     name = "Chat on IRC"
-    weight = 30
+    weight = 300
     url = "https://kiwiirc.com/client/irc.freenode.net/#anypaste"
 
 # Site parameters
 [params]
     landingTitle = "Anypaste"
+    landingSubtitle = "Command-line file sharing for hackers."
+    landingDescription = "**Anypaste** is a command line pastebin tool that's not just for plain text. **Anypaste** supports dozens of hosting sites that accept a variety of different file types, such as images, audio, and video, and has a plugin system to add your favorite hosting site if you find it's missing. **Anypaste** is great for sharing content via Reddit, IRC, Discord, Email, forums, or anywhere else that links can go."
 
     # Meta
     description = "Anypaste automatically determines the best host for your files and uploads them in a single command. File path in, URL out."

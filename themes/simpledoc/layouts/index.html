@@ -12,14 +12,20 @@
 
 <body>
     <div id="landing">
-        <div class="float-left">
-            <h1>{{ .Site.Params.landingTitle | markdownify }}</h1>
-        </div>
-        {{ with .Site.Params.asciinema }}
-            <div id="asciinema" class="float-right">
-                <script type="text/javascript" src="https://asciinema.org/a/{{ .id }}.js" id="asciicast-{{ .id }}" async data-rows='{{ .rows }}' data-preload='true'></script>
+        <h1 id="landing-title">
+            <strong id="landing-main-title">{{ .Site.Params.landingTitle | markdownify }}</strong><!--
+            --><span id="landing-subtitle">: {{ .Site.Params.landingSubtitle | markdownify }}</span>
+        </h1>
+        <div id="landing-content-wrapper">
+            <div>
+                <p id="landing-description">{{ .Site.Params.landingDescription | markdownify }}</p>
             </div>
-        {{ end }}
+            {{ with .Site.Params.asciinema }}
+                <div id="asciinema">
+                    <script type="text/javascript" src="https://asciinema.org/a/{{ .id }}.js" id="asciicast-{{ .id }}" async data-rows='{{ .rows }}' data-preload='true'></script>
+                </div>
+            {{ end }}
+        </div>
     </div>
 
     <div id="docs">

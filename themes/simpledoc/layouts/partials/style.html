@@ -16,15 +16,36 @@
         height: 100%;
     }
     #landing {
-        height: 100%;
+        min-height: 100%;
         box-shadow: #777 0 0 8px -4px;
         padding: 10vh;
     }
+    #landing-title {
+        font-size: 2.3rem;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+    #landing-content-wrapper {
+        display: flex;
+    }
+    #landing-content-wrapper > :first-child {
+        flex: 1;
+    }
+    #landing-content-wrapper > :last-child {
+        flex: 2;
+    }
+    #landing-description {
+        padding: 1.5rem 1.5rem 0 0;
+        font-size: 1.2em;
+        color: #222;
+    }
     .float-left {
         float: left;
+        width: 50%;
     }
     .float-right {
         float: right;
+        width: 50%;
     }
     #docs {
         font-size: 16px;
@@ -83,6 +104,7 @@
         position: relative;
         padding: 6% 8%;
         box-shadow: #777 0 0 8px -4px;
+        overflow: auto;
     }
     blockquote {
         border-left: 3px solid #d54e21;
@@ -121,7 +143,6 @@
         list-style: number;
     }
     ol li {
-        color: #98999C;
         margin-bottom: 5px;
     }
     ol li:last-child {
@@ -240,6 +261,22 @@
         }
     }   
     @media screen and (max-width: 514px) {
+        #landing {
+            padding: 1rem;
+        }
+        #landing-content-wrapper {
+            flex-direction: column;
+        }
+        #landing-subtitle {
+            display: none;
+        }
+        #landing-description {
+            font-size: 1rem;
+        }
+        #docs {
+            position: static;
+            margin: 2% 0;
+        }
         p, ul, ol, blockquote  {
             margin-bottom: 8%;
         }
@@ -260,7 +297,11 @@
     #landing {
         background: radial-gradient(circle at top left, aquamarine, lightgreen);
     }
-    #landing h1 {
-        color: hsl(300, 40%, 50%);
+    #landing-title {
+        color: #505070;
+        font-family: Anonymous Pro, Source Code Pro, Inconsolata, Courier, monospace;
+        border: 2px solid #505070;
+        border-top: none;
+        border-left: none;
     }
 </style>

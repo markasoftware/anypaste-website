@@ -5,12 +5,14 @@ anchor: "installation"
 weight: 100
 ---
 
-Anypaste is a shell script, and as such exists simply as a single executable file. You can download it from [GitHub](https://github.com/markasoftware/anypaste/releases), mark it as an executable file, then drop it somewhere in your `$PATH`, for example `/usr/local/bin/`. If you're not one for following instructions, just run these commands:
+Anypaste is just a single, cross-platform executable! That's because it's a shell script. You can download it from [https://anypaste.xyz/sh](https://anypaste.xyz/sh), which will just redirect you to the raw file hosted on GitHub. 
 
 ```bash
-sudo mkdir -p /usr/local/bin # sometimes doesn't exist on macOS
-sudo curl -o /usr/local/bin/anypaste https://gitlab.com/markasoftware/anypaste
+sudo mkdir -p /usr/local/bin # only needed on macOS
+sudo curl -Lo /usr/local/bin/anypaste https://anypaste.xyz/sh
 sudo chmod +x /usr/local/bin/anypaste
 ```
 
-Anypaste's dependencies are available out-of-the-box on most systems it supports. All it needs are recent versions of Bash, curl, and POSIX-compliant core utilities.
+### Dependencies
+
+Bash 4+, curl, and POSIX core utils are all you need. `ffprobe` is optional but can provide more accurate compatibility checking for media file types; typically it comes inside of an `ffmpeg` package. I recommend installing through Brew on macOS. Without `ffprobe`, Anypaste will still identify files as best it can using `file`.
