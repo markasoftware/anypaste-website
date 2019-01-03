@@ -15,4 +15,4 @@ sudo chmod +x /usr/local/bin/anypaste
 
 ### Dependencies
 
-Bash 4+, curl, and POSIX core utils are all you need. `ffprobe` is optional but can provide more accurate compatibility checking for media file types; typically it comes inside of an `ffmpeg` package. I recommend installing through Brew on macOS. Without `ffprobe`, Anypaste will still identify files as best it can using `file`.
+Bash, curl, and POSIX core utils are all you need. `ffprobe` is optional but can provide more accurate compatibility checking for media file types; typically it comes inside of an `ffmpeg` package.

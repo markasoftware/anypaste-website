@@ -15,7 +15,7 @@ ignoreFiles = ["\\.kate-swp"]
     weight = 200
     url = "https://anypaste.xyz/sh"
 [[menu.top]]
-    name = "Chat on IRC"
+    name = "Chat on IRC (#anypaste @ Freenode)"
     weight = 300
     url = "https://kiwiirc.com/client/irc.freenode.net/#anypaste"
 
