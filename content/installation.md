@@ -7,6 +7,8 @@ weight: 100
 
 Anypaste is just a single, cross-platform executable! That's because it's a shell script. You can download it from [https://anypaste.xyz/sh](https://anypaste.xyz/sh), which will just redirect you to the raw file hosted on GitHub. 
 
+Quick installation:
+
 ```bash
 sudo mkdir -p /usr/local/bin # only needed on macOS
 sudo curl -Lo /usr/local/bin/anypaste https://anypaste.xyz/sh
