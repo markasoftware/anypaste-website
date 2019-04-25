@@ -5,7 +5,7 @@ anchor: "making-plugins"
 weight: 1100
 ---
 
-An Anypaste plugin is just an executable file (Bash will be used orr all examples, but you can use any language you wish). This executable file is called with a single argument, which instructs the plugin on what to do. Additional data is not passed on the command line, but rather supplied through environment variables which the plugin can read at will. Here's a list of "commands" (the command line arguments) that can be passed to your plugin, and what your plugin should do in each situation:
+An Anypaste plugin is just an executable file (Bash will be used for all examples, but you can use any language you wish). This executable file is called with a single argument, which instructs the plugin on what to do. Additional data is not passed on the command line, but rather supplied through environment variables which the plugin can read at will. Here's a list of "commands" (the command line arguments) that can be passed to your plugin, and what your plugin should do in each situation:
 
 ## `check_eligibility`
 The plugin  should determine whether the file being uploaded is compatible with this plugin. Typically, this involves checking that `$ap_mime` is a supported MIME type and that `$ap_size` is not over the site's size limit. The plugin should exit with an exit code of `0` if it's compatible, or non-zero if it is incompatible. This step should *not* involve any sort of network communications.
@@ -32,24 +32,21 @@ The plugin should output "static" information about itself (metadata). Most of t
 ```
 [description]
 This is a cool plugin for uploading to imgur.com
-[type]
-Image
 [tags]
 permanent
 editable
 deletable
-
-[required_config]
-imgur_api_public:Public API key
-imgur_api_secret:Private API secret
+[config]
+required|imgur_api_public|Public API key
+requied|imgur_api_secret|Private API secret
 ```
 
 List of possible sections:
 
+ - `name`: A human-readable name of the plugin. Often just a capitalized version of the machine-readable name.
  - `description`: A human-readable description of what this plugin does.
- - `type`: The "type" of file this plugin supports. This is human-readable, and is simply meant to help people understand what the plugin is for. It does not affect plugin operation.
  - `tags`: The plugin's [tags](#cli), line-separated.
- - `required_config`, `recommended_config`, and `optional_config`: Should each have lines in the format `config_option_name:config option description`. The descriptions should be human readable, the names should be the machine-readable exact name of the configuration option you want. Anypaste will consider the plugin to be incompatible whenever required config options are missing, will send a warning when recommended options are missing, and will be silent when optional ones are missing. All of them will be printed in `anypaste -l`.
+ - `config`: Has lines in the format `requiredness|name|description`. Each is an additional environment variable/configuration option that the user may supply via `anypaste.conf`. `requiredness` should be either `optional`, in which case it is purely cosmetic for display in `anypaste -l`, `recommended`, which will trigger a warning whenever the plugin is run without that option, and `required`, which will consider the plugin incompatible if that option is missing. `name` is the name of the environment variable for this option. `description` is cosmetic and human-readable.
  
 ### Aside: Config options
  

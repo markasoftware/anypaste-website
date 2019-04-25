@@ -14,8 +14,8 @@ Variable|Description
 `ap_file_info`| Output of `file "$ap_path"`, contains lots of useful file metadata.
 `ap_mime`| Mime type of the file (from `file --mime-type --brief "$ap_path"`).
 `ap_ffprobe`| Output of `ffprobe -show_streams -show_format "$ap_path"`. Null if ffprobe is not installed. Often provides more accurate and reliable info that `file` can for audio and video.
-`ap_size`| Size of the file, in bytes (from `wc -c`)
-`ap_plugin`| The name of the plugin as it appears in `ap_plugins` (or `-p` if `-x` is set).
+`ap_size`| Size of the file, in bytes (from `wc -c`).
+`ap_plugin`| The name of the plugin as it appears in `ap_plugins`.
 `ap_version`| Current Anypaste version.
 `ap_mac`| `true` if running on Mac, `false` otherwise.
 <br>
