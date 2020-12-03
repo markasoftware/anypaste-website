@@ -17,11 +17,12 @@ Name | File Types | Extra Notes | Anypaste version
 [Tinyimg](https://tinyimg.io) | Images | | 1.0
 [Imgur](https://tinyimg.io) | Images | Uses a hardcoded API key. | 1.1
 [Clyp](https://clyp.it) | Audio | Pretty crappy. | 1.1
-[Hastebin](https://hastebin.com) | Text | Has frequent downtimes. | 1.0
+[Hastebin](https://hastebin.com) | Text | Frequent downtimes. | 1.0
 [ix.io](https://ix.io) | Text | | 1.0
 [Docdroid](https://docdroid.net) | Documents | Requires authentication. | 1.0
-[Filemail](https://filemail.com) | Generic | 50GB upload limit (no authentication). | 1.1.3
-[Transfer.sh](https://transfer.sh) | Generic | 10GB upload limit (no authentication). | 1.1
+[Filemail](https://filemail.com) | Generic | 50GB upload limit. | 1.1.3
+[Transfer.sh](https://transfersh.com) | Generic | 10GB upload limit. | 1.1
+[Keep.sh](https://keep.sh) | Generic | 500MB upload limit. | 1.1.3
 [Dmca.gripe](https://dmca.gripe) | Generic | 1GB upload limit. | 1.1
 [File.io](https://file.io) | Generic | Files deleted after first download. | 1.0
 
