@@ -16,10 +16,16 @@ Name | File Types | Extra Notes | Anypaste version
 [Gfycat](https://gfycat.com) | Videos (Gifs) | Short videos only. | 1.0
 [Tinyimg](https://tinyimg.io) | Images | | 1.0
 [Imgur](https://tinyimg.io) | Images | Uses a hardcoded API key. | 1.1
+[Pixhost](https://pixhost.to) | Images | | 1.1.4
 [Clyp](https://clyp.it) | Audio | Pretty crappy. | 1.1
-[Hastebin](https://hastebin.com) | Text | Frequent downtimes. | 1.0
 [ix.io](https://ix.io) | Text | | 1.0
+[Pastie](https://pastie.org) | Text | | 1.1.4
+[P.defau.lt](https://p.defau.lt) | Text | | 1.1.4
+[Paste2](https://paste2.org) | Text | | 1.1.4
+[Hastebin](https://hastebin.com) | Text | Frequent downtimes. | 1.0
 [Docdroid](https://docdroid.net) | Documents | Requires authentication. | 1.0
+[Gofile](https://gofile.com) | Generic | Unlimited size, official API. | 1.1.4
+[Bayfiles](https://bayfiles.com) | Generic | Official API. | 1.1.4
 [Filemail](https://filemail.com) | Generic | 50GB upload limit. | 1.1.3
 [Transfer.sh](https://transfersh.com) | Generic | 10GB upload limit. | 1.1
 [Keep.sh](https://keep.sh) | Generic | 500MB upload limit. | 1.1.3
