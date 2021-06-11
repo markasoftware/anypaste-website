@@ -37,4 +37,4 @@ Want to see your plugin on this list? [Open an issue!](https://github.com/markas
 
 Name | Description | Plugin Homepage
 ---|---|---
-[ThigImg](https://thinimg.com) | A simple plugin created mainly to serve as an example about how to make third-party plugins. See [Making Plugins](#making-plugins) for more information. | [GitHub](https://github.com/markasoftware/anypaste-thinimg)
+ThinImg | A simple plugin created mainly to serve as an example about how to make third-party plugins. Note that thinimg.com has gone down since this plugin was created, so it is useful only for pedagogical purposes. See [Making Plugins](#making-plugins) for more information. | [GitHub](https://github.com/markasoftware/anypaste-thinimg)
