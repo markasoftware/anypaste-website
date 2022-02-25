@@ -28,7 +28,6 @@ Name | File Types | Extra Notes | Anypaste version
 [Filemail](https://filemail.com) | Generic | 50GB upload limit. | 1.1.3
 [Transfer.sh](https://transfersh.com) | Generic | 10GB upload limit. | 1.1
 [Keep.sh](https://keep.sh) | Generic | 500MB upload limit. | 1.1.3
-[Dmca.gripe](https://dmca.gripe) | Generic | 1GB upload limit. | 1.1
 [File.io](https://file.io) | Generic | Files deleted after first download. | 1.0
 
 ## Third party plugins
