@@ -24,3 +24,4 @@ Option | Description | Default
 `ap_unicode` | Whether to prettify things with unicode characters. Mainly used in `anypaste -l`. | `true`
 `ap_color` | Whether to colorize the output. | `true`
 `ap_copy_regex` | The regular expression to determine which line to copy from when `--copy` is used. | `.` (matches first line)
+`ap_ua` | User-agent to use | `Anypaste 1.15` (or other version)
